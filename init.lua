@@ -176,7 +176,9 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-
+  {
+    'mfussenegger/nvim-dap',
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -264,6 +266,14 @@ require('telescope').setup {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
       },
+    },
+    file_ignore_patterns = {
+      ".git",
+    },
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
     },
   },
 }
